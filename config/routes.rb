@@ -10,7 +10,9 @@ namespace :admin do
   end
 end
 
-  resources :jobs
+  resources :jobs do
+    resources :resumes
+  end
   root 'jobs#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
