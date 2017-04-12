@@ -19,9 +19,9 @@
 
        <% if job.is_hidden %>
 
-       <%= link_to("Public", "#", :class => "btn btn-xs btn-default") %>
+       <%= link_to("Public", public_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-default") %>
        <% else %>
-       <%= link_to("Hide", "#", :class => "btn btn-xs btn-default") %>
+       <%= link_to("Hide", hide_admin_job_path(job), :method => :post, :class => "btn btn-xs btn-default") %>
        <% end %>
     </td>
     <td>
