@@ -10,7 +10,7 @@
 #  wage_upper_bound :integer
 #  wage_lower_bound :integer
 #  contact_email    :string
-#  is_hidden        :boolean          default("t")
+#  is_hidden        :boolean           default("t")
 #
 
 class Job < ApplicationRecord

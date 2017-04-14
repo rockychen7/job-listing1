@@ -55,7 +55,7 @@ end
     @job = Job.find(params[:id])
     @job.publish!
 
-    redirect :back
+    redirect_to :back
   end
 
   def hide
