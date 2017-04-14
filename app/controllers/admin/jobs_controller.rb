@@ -60,7 +60,7 @@ end
 
   def hide
     @job = Job.find(params[:id])
-    @job.hide
+    @job.hide!
 
     redirect_to :back
   end
