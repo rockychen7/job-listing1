@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get ground for better mobile display -->
     <div class="navbar-header">
-<a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden="true">Job Listing</i></a>
+      <a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden="true">Job Listing</i></a>
     </div>
 
     <!-- collect the nav links forms, and other content for togging -->
@@ -10,6 +10,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
              <% if !current_user %>
+             
               <li><%= link_to("注册", new_user_registration_path) %> </li>
               <li><%= link_to("登录", new_user_session_path) %></li>
               <% else %>
