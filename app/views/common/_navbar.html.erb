@@ -1,16 +1,25 @@
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get ground for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden="true">Job Listing</i></a>
+    <a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden="true">创业公社</i></a>
     </div>
 
     <!-- collect the nav links forms, and other content for togging -->
-    <div class="collapse navbar-collapse" id="bs-example- navbar-clllapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-clllapse-1">
+          <ul class="nav navbar-nav ">
+            <li><%= link_to("行业动态", "#") %> </li>
+            <li><%= link_to("最新发布", new_user_registration_path) %> </li>
+            <li><%= link_to("学习学习", new_user_registration_path) %> </li>
+            <li>
+                <div class="form-group form-inline search-bar">
+                  <%= render :partial => "jobs/search_bar" %>
+                </div>
+            </li>
+           </ul>
+      <ul class="nav navbar-nav navbar-right ">
              <% if !current_user %>
-             
               <li><%= link_to("注册", new_user_registration_path) %> </li>
               <li><%= link_to("登录", new_user_session_path) %></li>
               <% else %>
@@ -29,9 +38,17 @@
 
             </li>
             <% end %>
+             <% if !current_user %>
+             <li><%= link_to("企业登录", new_user_session_path) %></li>
+
+            <% end %>
+
+
           </li>
+
       </ul>
     </div>
+
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
